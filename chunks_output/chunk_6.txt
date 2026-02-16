@@ -1,0 +1,100 @@
+that accessed up to 16 memory modules through a crossbar switch.[83] In 1967, Amdahl and Slotnick published a debate
+about the feasibility of parallel processing at American Federation of Information Processing Societies Conference.
+[82] It was during this debate that Amdahl's law was coined to define the limit of speed-up due to parallelism.
+In 1969, Honeywell introduced its first Multics system, a symmetric multiprocessor system capable of running up to eight processors in parallel.[82] C.mmp, a multi-processor project at Carnegie Mellon University in the 1970s, was
+among the first multiprocessors with more than a few processors. The first bus-connected multiprocessor with snooping
+caches was the Synapse N+1 in 1984.[76]
+
+SIMD parallel computers can be traced back to the 1970s. The motivation behind early SIMD computers was to amortize
+the gate delay of the processor's control unit over multiple instructions.[84] In 1964, Slotnick had proposed
+building a massively parallel computer for the Lawrence Livermore National Laboratory.[82] His design was funded by
+the US Air Force, which was the earliest SIMD parallel-computing effort, ILLIAC IV.[82] The key to its design was a
+fairly high parallelism, with up to 256 processors, which allowed the machine to work on large datasets in what would
+later be known as vector processing. However, ILLIAC IV was called "the most infamous of supercomputers", because the
+project was only one-fourth completed, but took 11 years and cost almost four times the original estimate.[74] When
+it was finally ready to run its first real application in 1976, it was outperformed by existing commercial supercomputers such as the Cray-1.
+
+On 25 October 2004 McIntyre posted comments on climate2003.com about a piece by William Connolley circulated on
+various blogs, and on 26 October wrote, "Maybe I’ll start blogging some odds and ends that I’m working on. I’m going
+to post up some more observations on some of the blog criticisms."[7] On 1 December Michael E. Mann and nine other
+scientists launched the RealClimate website as "a resource where the public can go to see what actual scientists
+working in the field have to say about the latest issues."[8] On climate2003.com McIntyre noted this development in a
+blog post on 10 December, where he wrote "Mann and some of his colleagues have set up a blog at the above address. A
+couple of Mann's first postings have been arguments against our papers. I'll post up a two quick comments below."[7]
+On 2 February 2005 McIntyre set up his Climate Audit blog, having found difficulties with posting comments on the
+climate2003.com layout.[
+After the UK Freedom of Information Act (FOIA) came into effect in 2005, Climate Audit readers were asked to make FOI
+requests to the Climatic Research Unit (CRU) at the University of East Anglia (UEA) for the raw data from weather
+stations used in developing instrumental temperature record datasets, for copies of agreements under which the raw
+data was obtained from meteorology institutions, and also for email correspondence relating to the Intergovernmental
+Panel on Climate Change Fourth Assessment Report.[11] On 12 August 2009, Olive Heffernan wrote in naturenews that
+"Since 2002, Steve McIntyre, the editor of Climate Audit, a blog that investigates the statistical methods used in
+climate science, has repeatedly asked Phil Jones, director of the Climatic Research Unit (CRU) at the University of
+
+East Anglia, UK, for access to monthly global surface temperature data held by the institute. But in recent weeks,
+Jones has been swamped by a sudden surge in demands for data". She described how CRU had received 58 FOIA requests
+between 24 and 29 July 2009 from McIntyre or others associated with the blog. The raw data was restricted to
+academics, and the unit's director Phil Jones said that the data was subject to confidentiality agreements with
+various governments, but he was seeking agreement to get the raw data available online. He said that “Data release
+needs to be done in a systematic way.”[12]
+The site was one of the first to receive word of the e-mails which had been leaked[13][14][15] from the University of
+East Anglia with Jonathan Leake of The Times writing, "The storm began with just four cryptic words. 'A miracle has
+happened,' announced a contributor to Climate Audit, a website devoted to criticising the science of climate change."
+[16] Louise Gray wrote in The Daily Telegraph, "Climate Audit was one of the first to post up the stolen emails from
+the University of East Anglia that led to the 'climategate' scandal".[17]
+Bloomberg said of the controversy, "Web sites and blogs including the Climate Audit Mirror Site have carried copies
+of e-mails, correspondence between climatologists and commentary. In one e-mail cited widely on blogs including
+Climate Audit, Phil Jones writes about completing “Mike’s nature trick of adding in the real temps” in order to hide
+the decline."[18] According to Antonio Regalado writing in Science Insider, Jones wrote e-mails stating that he
+convinced the university's FOI managers to not release data to "greenhouse skeptics" because Jones believed that they
+planned to harm the UEA or setback climate science by drawing scientists into disputes, wasting research time.[19]
+"Think I've managed to persuade UEA to ignore all further FOIA requests if the people have anything to do with
+Climate Audit," Jones wrote in 2007.[19] The House of Commons' Science and Technology Committee largely vindicated
+the scientists involved in the scandal, but left consideration of the quality of the science and the conduct of the
+research to committees chaired by Lord Oxburgh and Sir Muir Russell. Fox News said that McIntyre "who also worked at
+the IPCC and submitted notes to the Science and Technology Committee for its investigation, wrote a lengthy rebuttal
+of the decision on his blog", and disputed the committee's conclusion that the word trick "appears to be a
+colloquialism for a 'neat' method of handling data".[20] Further investigations by the United States Environmental
+Protection Agency, the Inspector General of the United States Department of Commerce and the Office of the Inspector
+General (OIG) of the National Science Foundation reaffirmed that the accusations against the scientists were
+Technology has changed the way humans think, work, and connect with each other in ways that would have been
+unimaginable just a few decades ago.
+The rapid evolution of digital tools has made information more accessible than ever before, empowering individuals
+across the globe.
+Artificial intelligence is no longer a futuristic concept but a present-day reality influencing industries at every level.
+The rise of automation has transformed traditional job roles and created entirely new career opportunities.
+Remote work has redefined the modern workplace and blurred the boundaries between home and office.
+Cloud computing has enabled businesses to scale operations efficiently without heavy infrastructure investments.
+Social media platforms have reshaped communication patterns and influenced cultural trends worldwide.
+Cybersecurity has become a critical concern as digital systems grow increasingly interconnected and complex.
+Blockchain technology is revolutionizing the way transactions and data verification are handled securely.
+Data analytics is helping organizations make smarter decisions based on measurable insights and trends.
+Startups today can compete globally thanks to digital distribution channels and online marketplaces.
+The smartphone has become a central hub for productivity, entertainment, and social interaction.
+E-learning platforms are democratizing education and reaching learners in remote regions.
+Digital marketing strategies have shifted from traditional advertising to personalized engagement models.
+The Internet of Things is connecting everyday devices to create smarter living environments.
+Sustainable technology is playing a vital role in addressing environmental challenges.
+Virtual reality is expanding beyond gaming into education, healthcare, and training simulations.
+5G connectivity is accelerating communication speeds and enabling real-time applications.
+Edge computing is reducing latency by processing data closer to its source.
+Open-source communities are driving innovation through collaboration and shared knowledge.
+The gig economy has empowered freelancers to monetize skills globally.
+Machine learning algorithms are improving recommendations and predictive systems daily.
+Smart cities are leveraging sensors and data to optimize urban infrastructure.
+Digital payments are replacing cash transactions in many parts of the world.
+Fintech startups are disrupting traditional banking systems with agile solutions.
+Quantum computing promises breakthroughs in complex problem-solving scenarios.
+Automation in manufacturing is improving efficiency and reducing human error.
+Telemedicine has expanded healthcare access through virtual consultations.
+Wearable technology is helping individuals monitor health metrics in real time.
+Biotechnology innovations are merging computing with biological research.
+Augmented reality is enhancing customer experiences in retail environments.
+Big data is fueling personalized services across multiple industries.
+DevOps culture is streamlining software development and deployment cycles.
+Cyber laws are evolving to address digital privacy concerns.
+Digital transformation strategies are essential for business survival today.
+Entrepreneurship thrives in environments where technology lowers entry barriers.
+Crowdfunding platforms enable creators to bring ideas to life with community support.
+Artificial neural networks mimic human cognition to solve complex tasks.
+Automation tools are freeing professionals from repetitive manual work.

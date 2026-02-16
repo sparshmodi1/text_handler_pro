@@ -1,0 +1,100 @@
+PeakStream, and RapidMind. Nvidia has also released specific products for computation in their Tesla series. The
+technology consortium Khronos Group has released the OpenCL specification, which is a framework for writing programs
+that execute across platforms consisting of CPUs and GPUs. AMD, Apple, Intel, Nvidia and others are supporting OpenCL.
+Application-specific integrated circuitsMain article: Application-specific integrated circuit
+Several application-specific integrated circuit (ASIC) approaches have been devised for dealing with parallel
+applications.[63][64][65]
+Because an ASIC is (by definition) specific to a given application, it can be fully optimized for that application.
+As a result, for a given application, an ASIC tends to outperform a general-purpose computer. However, ASICs are
+created by UV photolithography. This process requires a mask set, which can be extremely expensive. A mask set can
+cost over a million US dollars.[66] (The smaller the transistors required for the chip, the more expensive the mask
+will be.) Meanwhile, performance increases in general-purpose computing over time (as described by Moore's law) tend
+to wipe out these gains in only one or two chip generations.[61] High initial cost, and the tendency to be overtaken
+by Moore's-law-driven general-purpose computing, has rendered ASICs unfeasible for most parallel computing
+applications. However, some have been built. One example is the PFLOPS RIKEN MDGRAPE-3 machine which uses custom
+ASICs for molecular dynamics simulation.Vector processorsMain article: Vector processorThe Cray-1 is a vector
+processor.
+A vector processor is a CPU or computer system that can execute the same instruction on large sets of data. Vector
+processors have high-level operations that work on linear arrays of numbers or vectors. An example vector operation
+is A = B × C, where A, B, and C are each 64-element vectors of 64-bit floating-point numbers.[67] They are closely
+related to Flynn's SIMD classification.[67]
+Cray computers became famous for their vector-processing computers in the 1970s and 1980s. However, vector
+processors—both as CPUs and as full computer systems—have generally disappeared. Modern processor instruction sets do
+include some vector processing instructions, such as with Freescale Semiconductor's AltiVec and Intel's Streaming
+SIMD Extensions (SSE).
+Software
+Parallel programming languages
+Main article: List of concurrent and parallel programming languages
+Concurrent programming languages, libraries, APIs, and parallel programming models (such as algorithmic skeletons)
+have been created for programming parallel computers. These can generally be divided into classes based on the
+assumptions they make about the underlying memory architecture—shared memory, distributed memory, or shared
+distributed memory. Shared memory programming languages communicate by manipulating shared memory variables.
+Distributed memory uses message passing. POSIX Threads and OpenMP are two of the most widely used shared memory APIs,
+whereas Message Passing Interface (MPI) is the most widely used message-passing system API.[68] One concept used in
+programming parallel programs is the future concept, where one part of a program promises to deliver a required datum
+to another part of a program at some future time.
+Efforts to standardize parallel programming include an open standard called OpenHMPP for hybrid multi-core parallel
+programming. The OpenHMPP directive-based programming model offers a syntax to efficiently offload computations on
+hardware accelerators and to optimize data movement to/from the hardware memory using remote procedure calls.
+The rise of consumer GPUs has led to support for compute kernels, either in graphics APIs (referred to as compute
+shaders), in dedicated APIs (such as OpenCL), or in other language extensions.
+
+Automatic parallelization
+Main article: Automatic parallelization
+Automatic parallelization of a sequential program by a compiler is the "holy grail" of parallel computing, especially
+with the aforementioned limit of processor frequency. Despite decades of work by compiler researchers, automatic
+parallelization has had only limited success.[69]
+Mainstream parallel programming languages remain either explicitly parallel or (at best) partially implicit, in which
+
+a programmer gives the compiler directives for parallelization. A few fully implicit parallel programming languages
+exist—SISAL, Parallel Haskell, SequenceL, SystemC (for FPGAs), Mitrion-C, VHDL, and Verilog.
+Application checkpointing
+Main article: Application checkpointing
+As a computer system grows in complexity, the mean time between failures usually decreases. Application checkpointing
+is a technique whereby the computer system takes a "snapshot" of the application—a record of all current resource
+allocations and variable states, akin to a core dump—; this information can be used to restore the program if the
+computer should fail. Application checkpointing means that the program has to restart from only its last checkpoint
+rather than the beginning. While checkpointing provides benefits in a variety of situations, it is especially useful
+in highly parallel systems with a large number of processors used in high performance computing.[70]Algorithmic
+methodsAs parallel computers become larger and faster, we are now able to solve problems that had previously taken
+too long to run. Fields as varied as bioinformatics (for protein folding and sequence analysis) and economics have
+taken advantage of parallel computing. Common types of problems in parallel computing applications include:[71]
+Dense linear algebra
+Sparse linear algebra
+Spectral methods (such as Cooley–Tukey fast Fourier transform)
+N-body problems (such as Barnes–Hut simulation)
+Structured grid problems (such as Lattice Boltzmann methods)
+Unstructured grid problems (such as found in finite element analysis)
+Monte Carlo method
+Combinational logic (such as brute-force cryptographic techniques)
+Graph traversal (such as sorting algorithms)
+Dynamic programming
+Branch and bound methods
+Graphical models (such as detecting hidden Markov models and constructing Bayesian networks)
+HBJ model, a concise message-passing model[72]
+Finite-state machine simulation
+Optimization problems (such as genetic algorithms and simulated annealing)
+Particle methods (such as particle-in-cell and smoothed particle hydrodynamics)
+Constraint satisfaction problems (CSPs)
+Data mining and pattern recognition
+Machine learning and deep learning training
+Ray tracing and rendering
+Time-series analysis
+Streaming data analytics
+Fault tolerance
+Further information: Fault-tolerant computer system
+Parallel computing can also be applied to the design of fault-tolerant computer systems, particularly via lockstep
+systems performing the same operation in parallel. This provides redundancy in case one component fails, and also
+allows automatic error detection and error correction if the results differ. These methods can be used to help
+prevent single-event upsets caused by transient errors.[73] Although additional measures may be required in embedded
+or specialized systems, this method can provide a cost-effective approach to achieve n-modular redundancy in
+commercial off-the-shelf systems.HistoryFor broader coverage of this topic, see History of computing.
+ILLIAC IV, "the most infamous of supercomputers"[74]
+The origins of true (MIMD) parallelism go back to Luigi Federico Menabrea and his Sketch of the Analytic Engine
+Invented by Charles Babbage.[75][76][77]
+In 1957, Compagnie des Machines Bull announced the first computer architecture specifically designed for parallelism,
+the Gamma 60.[78] It utilized a fork-join model and a "Program Distributor" to dispatch and collect data to and from
+independent processing units connected to a central memory.[79][80]
+In April 1958, Stanley Gill (Ferranti) discussed parallel programming and the need for branching and waiting.[81]
+Also in 1958, IBM researchers John Cocke and Daniel Slotnick discussed the use of parallelism in numerical
+calculations for the first time.[82] Burroughs Corporation introduced the D825 in 1962, a four-processor computer

@@ -1,0 +1,100 @@
+shared (either multiported or multiplexed) memory, a crossbar switch, a shared bus or an interconnect network of a
+myriad of topologies including star, ring, tree, hypercube, fat hypercube (a hypercube with more than one processor
+at a node), or n-dimensional mesh.
+
+Parallel computers based on interconnected networks need to have some kind of routing to enable the passing of
+messages between nodes that are not directly connected. The medium used for communication between the processors is likely to be hierarchical in large multiprocessor machines.
+
+Classes of parallel computersParallel computers can be roughly classified according to the level at which the hardware supports parallelism. This classification is broadly analogous to the distance between basic computing
+nodes. These are not mutually exclusive; for example, clusters of symmetric multiprocessors are relatively common.
+
+Multi-core computingMain article: Multi-core processorA multi-core processor is a processor that includes multiple processing units (called "cores") on the same chip. This processor differs from a superscalar processor, which
+
+includes multiple execution units and can issue multiple instructions per clock cycle from one instruction stream (thread); in contrast, a multi-core processor can issue multiple instructions per clock cycle from multiple
+instruction streams. IBM's Cell microprocessor, designed for use in the Sony PlayStation 3, is a prominent multi-core
+processor. Each core in a multi-core processor can potentially be superscalar as well—that is, on every clock cycle,
+each core can issue multiple instructions from one thread.
+
+Simultaneous multithreading (of which Intel's Hyper-Threading is the best known) was an early form of
+pseudo-multi-coreism. A processor capable of concurrent multithreading includes multiple execution units in the same
+processing unit—that is it has a superscalar architecture—and can issue multiple instructions per clock cycle from
+multiple threads. Temporal multithreading on the other hand includes a single execution unit in the same procesunit and can issue one instruction at a time from multiple threads.
+Symmetric multiprocessingMain article: Symmetric multiprocessingA symmetric multiprocessor (SMP) is a computer system
+with multiple identical processors that share memory and connect via a bus.[45] Bus contention prevents bus
+architectures from scaling. As a result, SMPs generally do not comprise more than 32 processors.[46] Because of the
+small size of the processors and the significant reduction in the requirements for bus bandwidth achieved by large
+caches, such symmetric multiprocessors are extremely cost-effective, provided that a sufficient amount of memory
+bandwidth exists.[45]
+Distributed computingMain article: Distributed computingA distributed computer (also known as a distributed memory
+multiprocessor) is a distributed memory computer system in which the processing elements are connected by a network.
+Distributed computers are highly scalable. The terms "concurrent computing", "parallel computing", and "distributed
+
+computing" have a lot of overlap, and no clear distinction exists between them.[47][48] The same system may be
+characterized both as "parallel" and "distributed"; the processors in a typical distributed system run concurrently
+
+in parallel.[49][50]
+
+Cluster computingMain article: Computer clusterA Beowulf clusterA cluster is a group of loosely coupled computers
+that work together closely, so that in some respects they can be regarded as a single computer.[51] Clusters are
+composed of multiple standalone machines connected by a network. While machines in a cluster do not have to be
+symmetric, load balancing is more difficult if they are not. The most common type of cluster is the Beowulf cluster,
+which is a cluster implemented on multiple identical commercial off-the-shelf computers connected with a TCP/IP
+Ethernet local area network.[52] Beowulf technology was originally developed by Thomas Sterling and Donald Becker.
+87% of all Top500 supercomputers are clusters.[53] The remaining are Massively Parallel Processors, explained below.
+
+
+Because grid computing systems (described below) can easily handle embarrassingly parallel problems, modern clusters
+are typically designed to handle more difficult problems—problems that require nodes to share intermediate results
+with each other more often. This requires a high bandwidth and, more importantly, a low-latency interconnection
+network. Many historic and current supercomputers use customized high-performance network hardware specifically
+designed for cluster computing, such as the Cray Gemini network.[54] As of 2014, most current supercomputers use some
+off-the-shelf standard network hardware, often Myrinet, InfiniBand, or Gigabit Ethernet.
+
+
+Massively parallel computingMain article: Massively parallel (computing)A cabinet from IBM's Blue Gene/L massively
+parallel supercomputerA massively parallel processor (MPP) is a single computer with many networked processors. MPPs
+have many of the same characteristics as clusters, but MPPs have specialized interconnect networks (whereas clusters
+
+use commodity hardware for networking). MPPs also tend to be larger than clusters, typically having "far more" than
+100 processors.[55] In an MPP, "each CPU contains its own memory and copy of the operating system and application.
+Each subsystem communicates with the others via a high-speed interconnect."[56]
+IBM's Blue Gene/L, the fifth fastest supercomputer in the world according to the June 2009 TOP500 ranking, is an MPP.
+Grid computingMain article: Grid computingGrid computing is the most distributed form of parallel computing. It makes
+use of computers communicating over the Internet to work on a given problem. Because of the low bandwidth and
+extremely high latency available on the Internet, distributed computing typically deals only with embarrassingly
+parallel problems.
+Most grid computing applications use middleware (software that sits between the operating system and the application
+to manage network resources and standardize the software interface). The most common grid computing middleware is the
+Berkeley Open Infrastructure for Network Computing (BOINC). Often volunteer computing software makes use of "spare
+cycles", performing computations at times when a computer is idling.[57]
+
+Cloud computingMain article: Cloud computingThe ubiquity of the Internet and high-bandwidth networks enabled cloud
+computing, a model where massively parallel resources are provided as a service. This paradigm abstracts the
+underlying hardware, allowing users to access virtualized clusters for scalable workloads without managing physical
+infrastructure.
+Distributed ledger technologyMain article: Distributed ledger technologyModern distributed ledger protocols apply
+parallel computing principles to overcome the sequential bottlenecks of traditional blockchains. By sharding the
+state space, newer consensus architectures allow for "massively parallel transaction processing". In this model,
+utilized by protocols such as Cerberus, independent transactions are treated as parallel tasks that can be executed
+simultaneously on different nodes, rather than being processed serially in a single global block.[58]
+Specialized parallel computersWithin parallel computing, there are specialized parallel devices that remain niche
+areas of interest. While not domain-specific, they tend to be applicable to only a few classes of parallel problems.
+Reconfigurable computing with field-programmable gate arrays
+Reconfigurable computing is the use of a field-programmable gate array (FPGA) as a co-processor to a general-purpose
+computer. An FPGA is, in essence, a computer chip that can rewire itself for a given task.
+FPGAs can be programmed with hardware description languages such as VHDL[59] or Verilog.[60] Several vendors have
+created C to HDL languages that attempt to emulate the syntax and semantics of the C programming language, with which
+most programmers are familiar. The best known C to HDL languages are Mitrion-C, Impulse C, and Handel-C. Specific
+subsets of SystemC based on C++ can also be used for this purpose.
+AMD's decision to open its HyperTransport technology to third-party vendors has become the enabling technology for
+high-performance reconfigurable computing.[61] According to Michael R. D'Amour, Chief Operating Officer of DRC
+Computer Corporation, "when we first walked into AMD, they called us 'the socket stealers.' Now they call us their
+partners."[61]
+General-purpose computing on graphics processing units (GPGPU)Main article: GPGPU Nvidia's Tesla GPGPU card
+General-purpose computing on graphics processing units (GPGPU) is a fairly recent trend in computer engineering
+research. GPUs are co-processors that have been heavily optimized for computer graphics processing.[62] Computer
+graphics processing is a field dominated by data parallel operations—particularly linear algebra matrix operations.In
+the early days, GPGPU programs used the normal graphics APIs for executing programs. However, several new programming
+languages and platforms have been built to do general purpose computation on GPUs with both Nvidia and AMD releasing
+
+programming environments with CUDA and Stream SDK respectively. Other GPU programming languages include BrookGPU,

@@ -1,0 +1,99 @@
+A graphical representation of Amdahl's law. The law demonstrates the theoretical maximum speedup of an overall system
+and the concept of diminishing returns. If exactly 50% of the work can be parallelized, the best possible speedup is
+2 times. If 95% of the work can be parallelized, the best possible speedup is 20 times. According to the law, even
+with an infinite number of processors, the speedup is constrained by the unparallelizable portion.
+Assume that a task has two independent parts, A and B. Part B takes roughly 25% of the time of the whole computation.
+By working very hard, one may be able to make this part 5 times faster, but this only reduces the time for the whole
+computation by a little. In contrast, one may need to perform less work to make part A twice as fast. This will make
+the computation much faster than by optimizing part B, even though part B's speedup is greater by ratio, (5 times
+versus 2 times).
+Main article: Amdahl's law
+Optimally, the speedup from parallelization would be linear—doubling the number of processing elements should halve
+the runtime, and doubling it a second time should again halve the runtime. However, very few parallel algorithms
+achieve optimal speedup. Most of them have a near-linear speedup for small numbers of processing elements, which
+flattens out into a constant value for large numbers of processing elements.
+
+The maximum potential speedup of an overall system can be calculated by Amdahl's law.[14] Amdahl's Law indicates that
+optimal performance improvement is achieved by balancing enhancements to both parallelizable and non-parallelizable
+components of a task. Furthermore, it reveals that increasing the number of processors yields diminishing returns,
+with negligible speedup gains beyond a certain point.[15][16]
+Amdahl's Law has limitations, including assumptions of fixed workload, neglecting inter-process communication and
+synchronization overheads, primarily focusing on computational aspect and ignoring extrinsic factors such as data
+persistence, I/O operations, and memory access overheads.[17][18][19]
+Gustafson's law and Universal Scalability Law give a more realistic assessment of the parallel performance.[20][21]
+A graphical representation of Gustafson's law
+Dependencies
+Understanding data dependencies is fundamental in implementing parallel algorithms. No program can run more quickly
+than the longest chain of dependent calculations (known as the critical path), since calculations that depend upon
+prior calculations in the chain must be executed in order. However, most algorithms do not consist of just a long
+chain of dependent calculations; there are usually opportunities to execute independent calculations in parallel.
+Let Pi and Pj be two program segments. Bernstein's conditions[22] describe when the two are independent and can be
+executed in parallel. For Pi, let Ii be all of the input variables and Oi the output variables, and likewise for Pj.
+Pi and Pj are independent if they satisfy
+Violation of the first condition introduces a flow dependency, corresponding to the first segment producing a result
+used by the second segment. The second condition represents an anti-dependency, when the second segment produces a
+variable needed by the first segment. The third and final condition represents an output dependency: when two
+segments write to the same location, the result comes from the logically last executed segment.[23]
+Consider the following functions, which demonstrate several kinds of dependencies:
+In this example, instruction 3 cannot be executed before (or even in parallel with) instruction 2, because
+instruction 3 uses a result from instruction 2. It violates condition 1, and thus introduces a flow dependency.
+In this example, there are no dependencies between the instructions, so they can all be run in parallel.
+Bernstein's conditions do not allow memory to be shared between different processes. For that, some means of
+enforcing an ordering between accesses is necessary, such as semaphores, barriers or some other synchronization
+method.
+Race conditions, mutual exclusion, synchronization, and parallel slowdown
+Subtasks in a parallel program are often called threads. Some parallel computer architectures use smaller,
+lightweight versions of threads known as fibers, while others use bigger versions known as processes. However,
+"threads" is generally accepted as a generic term for subtasks.[24] Threads will often need synchronized access to an
+object or other resource, for example when they must update a variable that is shared between them. Without
+synchronization, the instructions between the two threads may be interleaved in any order. For example, consider the
+following program:
+Thread A	Thread B
+1A: Read variable V	1B: Read variable V
+2A: Add 1 to variable V	2B: Add 1 to variable V
+3A: Write back to variable V	3B: Write back to variable V
+If instruction 1B is executed between 1A and 3A, or if instruction 1A is executed between 1B and 3B, the program will
+produce incorrect data. This is known as a race condition. The programmer must use a lock to provide mutual
+exclusion. A lock is a programming language construct that allows one thread to take control of a variable and
+prevent other threads from reading or writing it, until that variable is unlocked. The thread holding the lock is
+free to execute its critical section (the section of a program that requires exclusive access to some variable), and
+to unlock the data when it is finished. Therefore, to guarantee correct program execution, the above program can be
+rewritten to use locks:
+Thread A	Thread B
+1A: Lock variable V	1B: Lock variable V
+2A: Read variable V	2B: Read variable V
+3A: Add 1 to variable V	3B: Add 1 to variable V
+4A: Write back to variable V	4B: Write back to variable V
+5A: Unlock variable V	5B: Unlock variable V
+One thread will successfully lock variable V, while the other thread will be locked out—unable to proceed until V is
+unlocked again. This guarantees correct execution of the program. Locks may be necessary to ensure correct program
+execution when threads must serialize access to resources, but their use can greatly slow a program and may affect
+its reliability.[25]
+Locking multiple variables using non-atomic locks introduces the possibility of program deadlock. An atomic lock
+locks multiple variables all at once. If it cannot lock all of them, it does not lock any of them. If two threads
+each need to lock the same two variables using non-atomic locks, it is possible that one thread will lock one of them
+and the second thread will lock the second variable. In such a case, neither thread can complete, and deadlock
+results.[26]
+Many parallel programs require that their subtasks act in synchrony. This requires the use of a barrier. Barriers are
+typically implemented using a lock or a semaphore.[27] One class of algorithms, known as lock-free and wait-free
+algorithms, altogether avoids the use of locks and barriers. However, this approach is generally difficult to
+implement and requires correctly designed data structures.[28]
+Not all parallelization results in speed-up. Generally, as a task is split up into more and more threads, those
+threads spend an ever-increasing portion of their time communicating with each other or waiting on each other for
+access to resources.[29][30] Once the overhead from resource contention or communication dominates the time spent on
+other computation, further parallelization (that is, splitting the workload over even more threads) increases rather
+than decreases the amount of time required to finish. This problem, known as parallel slowdown,[31] can be improved
+in some cases by software analysis and redesign.[32]
+Fine-grained, coarse-grained, and embarrassing parallelism
+Applications are often classified according to how often their subtasks need to synchronize or communicate with each
+other. An application exhibits fine-grained parallelism if its subtasks must communicate many times per second; it
+exhibits coarse-grained parallelism if they do not communicate many times per second, and it exhibits embarrassing
+parallelism if they rarely or never have to communicate. Embarrassingly parallel applications are considered the
+easiest to parallelize.Flynn's taxonomyMain article: Flynn's taxonomy
+
+Michael J. Flynn created one of the earliest classification systems for parallel (and sequential) computers and
+programs, now known as Flynn's taxonomy. Flynn classified programs and computers by whether they were operating using
+a single set or multiple sets of instructions, and whether or not those instructions were using a single set or
+multiple sets of data.Flynn's taxonomySingle data streamSISDMISDMultiple data streamsSIMDMIMDSIMD subcategories[33]
+
+Array processing (SIMT)Pipelined processing (packed SIMD)Associative processing (predicated/masked SIMD)See also
