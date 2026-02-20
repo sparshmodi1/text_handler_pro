@@ -1,30 +1,45 @@
-import sqlite3
-from chunks import create_chunks
+import os
+import re
+from multiprocessing import Pool
 from processor import process_chunk
 from database import create_result_table
-from multiprocessing import Pool
 
-# Fetch data from DB
-conn = sqlite3.connect("chunks.db")
-cursor = conn.cursor()
+def load_chunks():
+    chunk_folder = "chunks_output"
+    chunks = []
 
-cursor.execute("SELECT content FROM large_text_data")
-rows = cursor.fetchall()
-conn.close()
+    files = os.listdir(chunk_folder)
 
-lines = [row[0] for row in rows]
+    #numeric sorting
+    def extract_number(filename):
+        match = re.search(r'\d+', filename)
+        return int(match.group())
 
-# Create chunks
-chunks = create_chunks(lines, 100)
+    files.sort(key=extract_number)
 
-# Create result table
-create_result_table()
+    for filename in files:
+        path = os.path.join(chunk_folder, filename)
 
-# Parallel processing
+        with open(path, "r", encoding="utf-8") as f:
+            lines = f.readlines()
+            chunks.append(lines)
+
+    return chunks
+
+
 if __name__ == "__main__":
-    chunk_data = [(i+1, chunk) for i, chunk in enumerate(chunks)]
 
+    #Load all chunk files
+    chunks = load_chunks()
+
+    # Create / Reset result table
+    create_result_table()
+
+    # Prepare chunk_id + data
+    chunk_data = [(i + 1, chunk) for i, chunk in enumerate(chunks)]
+
+    #Parallel processing
     with Pool(4) as pool:
-        results = pool.map(process_chunk, chunk_data)
+        pool.map(process_chunk, chunk_data)
 
     print("Processing Completed!")
