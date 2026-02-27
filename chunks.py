@@ -1,5 +1,5 @@
-def create_chunks(lines, chunk_size=100):
+def create_chunks(reviews, chunk_size=100):
     return [
-        lines[i:i+chunk_size]
-        for i in range(0, len(lines), chunk_size)
+        reviews[i:i+chunk_size]
+        for i in range(0, len(reviews), chunk_size)
     ]
