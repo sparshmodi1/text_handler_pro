@@ -30,7 +30,7 @@ def create_result_table():
     conn.commit()
     conn.close()
     
-def insert_result(chunk_id, word_count, keyword_count, score, sentiment, exec_time):
+def insert_result(chunk_id, word_count, keyword_count, sentiment_score, sentiment_label, exec_time):
     conn = sqlite3.connect(db_name)
     cursor = conn.cursor()
 
@@ -42,8 +42,8 @@ def insert_result(chunk_id, word_count, keyword_count, score, sentiment, exec_ti
         chunk_id,
         word_count,
         keyword_count,
-        score,
-        sentiment,
+        sentiment_score,
+        sentiment_label,
         exec_time,
     ))
 
