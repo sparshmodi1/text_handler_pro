@@ -168,6 +168,56 @@ Example mapping:
 This improves readability of the analysis results.
 
 ---
+# 🧠 Advanced Sentiment Logic
+
+The sentiment engine includes **negation and intensity handling** to improve accuracy of rule-based sentiment analysis.
+
+### Negation Handling
+
+Words like:
+
+```
+not
+never
+no
+```
+
+reverse the sentiment of the following word.
+
+Example:
+
+```
+not good → negative sentiment
+not bad → positive sentiment
+```
+
+### Intensity Detection
+
+Words such as:
+
+```
+very
+extremely
+really
+```
+
+increase the strength of the sentiment.
+
+Example:
+
+```
+very good → stronger positive sentiment
+extremely bad → stronger negative sentiment
+```
+
+Implementation:
+
+```python
+NEGATIONS = {"not", "never", "no"}
+INTENSIFIERS = {"very", "extremely", "really"}
+```
+
+This enhancement improves the accuracy of the rule engine compared to simple keyword-based sentiment scoring.
 
 # 🗄️ Database Schema
 
