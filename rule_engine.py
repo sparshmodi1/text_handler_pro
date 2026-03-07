@@ -17,15 +17,16 @@ class RuleEngine:
         
 
 SENTIMENT_WEIGHTS = {
+
     # positive
-    "excellent": 3,
+    "excellent": 2,
     "amazing": 2,
     "good": 1,
 
     # negative
     "bad": -1,
-    "worst": -2,
-    "terrible": -3
+    "boring": -2,
+    "worst": -2
 }
 
 
@@ -41,11 +42,16 @@ def calculate_sentiment(text):
     return score
 
 
-def classify_sentiment(score):
+    
+def score_to_star(score):
 
-    if score > 1:
-        return "POSITIVE"
-    elif score < -1:
-        return "NEGATIVE"
+    if score >= 5:
+        return "⭐⭐⭐⭐⭐"
+    elif score >= 4:
+        return "⭐⭐⭐⭐"
+    elif score >= 2:
+        return "⭐⭐⭐"
+    elif score >= -2:
+        return "⭐⭐"
     else:
-        return "NEUTRAL"
+        return "⭐"    

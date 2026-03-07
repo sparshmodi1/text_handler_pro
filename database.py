@@ -4,7 +4,7 @@ from datetime import datetime
 db_name = "chunks.db"
 
 
-def get_connection():
+def get_connection(): 
     return sqlite3.connect(db_name)
 
 
@@ -42,7 +42,7 @@ def insert_result(chunk_id, word_count, keyword_count, score, sentiment, exec_ti
         chunk_id,
         word_count,
         keyword_count,
-        score, 
+        score,
         sentiment,
         exec_time,
     ))

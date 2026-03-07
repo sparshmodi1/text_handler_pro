@@ -7,7 +7,6 @@ from database import create_result_table
 
 
 def load_chunks():
-    chunk_folder = "chunks_reviews"
     reviews = []
 
     # Read CSV
@@ -37,5 +36,6 @@ if __name__ == "__main__":
     # Parallel processing
     with Pool(5) as pool:
         pool.map(process_chunk, chunk_data)
+        
 
     print("Processing Completed!")

@@ -1,7 +1,8 @@
 import os
 import time
 from database import insert_result
-from rule_engine import calculate_sentiment, classify_sentiment
+from rule_engine import RuleEngine, calculate_sentiment, score_to_star
+engine = RuleEngine()
 
 
 def process_chunk(args):
@@ -13,11 +14,11 @@ def process_chunk(args):
 
     #processing
     text = " ".join(chunk)
-    word_count = len(text.split())
+    word_count = engine.word_count(text)
     
-    keyword_count = text.lower().count("data")
+    keyword_count = engine.keyword_count(text, "data")
     score = calculate_sentiment(text)
-    sentiment = classify_sentiment(score)
+    sentiment = score_to_star(score)
 
     exec_time = time.perf_counter() - start_time
 
