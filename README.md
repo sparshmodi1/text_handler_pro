@@ -165,7 +165,7 @@ The system performs:
 
 ---
 
-## 📸 Dashboard Screenshots
+## 📸 Dashboard Preview
 
 ### ⬆ Upload & Process
 ![Upload](screenshots/upload.png)
@@ -191,7 +191,7 @@ The system performs:
 ### 💬 Live Analyzer
 ![Live](screenshots/live.png)
 
-### 📤 Export
+### 📤 Export (Multiple Filters)
 ![Export](screenshots/export.png)
 
 ### 🗂️ Sidebar
