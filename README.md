@@ -58,7 +58,7 @@ The system performs:
 ## 🧠 Internal Processing Pipeline
 
 ```
-         IMDb Dataset (.csv / .xlsx / .json / .txt)
+           Dataset (.csv / .xlsx / .json / .txt)
                            │
                            ▼
                ┌───────────────────────┐
