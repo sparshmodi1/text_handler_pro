@@ -197,8 +197,6 @@ The system performs:
 ### 🗂️ Sidebar
 ![Sidebar](screenshots/sidebar.png)
 
-> 📁 Place screenshots in a `/screenshots` folder in the project root.
-
 ---
 
 ## 🔑 Sentiment Engine Details
@@ -358,17 +356,6 @@ with Pool(5) as pool:
 | Duplicate Detection | `chunk_id UNIQUE` constraint + skip logic in insert |
 | File Abstraction | Single pipeline handles CSV, Excel, JSON, TXT silently |
 | SQLite Integration | Lightweight embedded DB, no server required |
-
----
-
-## 🚀 Future Improvements
-
-- [ ] Add more keywords to `KW` list (acting, direction, story)
-- [ ] Support URL-based data ingestion
-- [ ] Add user-defined keyword input from dashboard
-- [ ] Comparative analysis across multiple uploaded files
-- [ ] Export full report as PDF
-- [ ] Deploy dashboard to Streamlit Cloud
 
 ---
 
