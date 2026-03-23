@@ -23,7 +23,7 @@
 
 ## 🌟 Project Overview
 
-**TextLens** is a scalable Python-based system that processes large text datasets — like 50,000 IMDb movie reviews — using **parallel computing**, and displays all results in an interactive **Streamlit dashboard**.
+**TextLens** is a scalable Python-based system that processes large text datasets — like 50,000+ IMDb movie reviews — using **parallel computing**, and displays all results in an interactive **Streamlit dashboard**.
 
 The system performs:
 
