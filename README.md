@@ -293,8 +293,7 @@ python main.py
 ```
 1. Process    → chunk & analyze imdb.csv
 2. Search     → filter / keyword search / export
-3. Clear DB   → wipe database and reset
-4. Exit
+3. Exit
 ```
 
 ---
@@ -345,7 +344,7 @@ with Pool(5) as pool:
 
 ---
 
-## 🧠 Key Concepts (For Interview)
+## 🧠 Key Concepts
 
 | Concept | How it's used here |
 |---------|-------------------|
