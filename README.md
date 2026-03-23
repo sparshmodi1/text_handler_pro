@@ -23,7 +23,7 @@
 
 ## 🌟 Project Overview
 
-**TextLens** is a scalable Python-based system that processes large text datasets — like 50,000+ IMDb movie reviews — using **parallel computing**, and displays all results in an interactive **Streamlit dashboard**.
+**TextLens** is a scalable Python-based system that processes large text datasets — like 50,000 IMDb movie reviews — using **parallel computing**, and displays all results in an interactive **Streamlit dashboard**.
 
 The system performs:
 
@@ -58,7 +58,7 @@ The system performs:
 ## 🧠 Internal Processing Pipeline
 
 ```
-           Dataset (.csv / .xlsx / .json / .txt)
+         IMDb Dataset (.csv / .xlsx / .json / .txt)
                            │
                            ▼
                ┌───────────────────────┐
@@ -165,7 +165,7 @@ The system performs:
 
 ---
 
-## 📸 Dashboard Preview
+## 📸 Dashboard Screenshots
 
 ### ⬆ Upload & Process
 ![Upload](screenshots/upload.png)
@@ -191,11 +191,12 @@ The system performs:
 ### 💬 Live Analyzer
 ![Live](screenshots/live.png)
 
-### 📤 Export (Multiple Filters)
+### 📤 Export
 ![Export](screenshots/export.png)
 
 ### 🗂️ Sidebar
 ![Sidebar](screenshots/sidebar.png)
+
 
 ---
 
@@ -289,33 +290,12 @@ Then open `http://localhost:8501` and upload your file in the **Upload & Process
 python main.py
 ```
 
-### Terminal Menu:
-
-1. Process
-   → Chunk and analyze imdb.csv
-
-2. Search
-   → Filter / Keyword Search / Export
-
-   1. ALL
-      → Returns all processed chunks
-
-   2. Sentiments
-      → Search by available sentiments (from processed data)
-
-   3. Score Range
-      → Search by score range (min to max)
-
-   4. Keyword Search
-      → Search for any keyword occurrence
-
-   5. Export Last Search
-      → Export last search results to CSV file
-
-   6. Exit
-      → Return to main menu
-
-3. Exit
+**Terminal menu:**
+```
+1. Process    → chunk & analyze imdb.csv
+2. Search     → filter / keyword search / export
+3. Clear DB   → wipe database and reset
+4. Exit
 ```
 
 ---
@@ -366,7 +346,7 @@ with Pool(5) as pool:
 
 ---
 
-## 🧠 Key Concepts
+## 🧠 Key Concepts (For Interview)
 
 | Concept | How it's used here |
 |---------|-------------------|
@@ -395,3 +375,6 @@ with Pool(5) as pool:
 <p align="center">
   ⭐ &nbsp; Efficient &nbsp;•&nbsp; Parallel &nbsp;•&nbsp; Intelligent &nbsp;•&nbsp; Scalable &nbsp; ⭐
 </p>
+
+## License
+This project is licensed under the MIT License.
