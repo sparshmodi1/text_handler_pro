@@ -290,13 +290,33 @@ Then open `http://localhost:8501` and upload your file in the **Upload & Process
 python main.py
 ```
 
-**Terminal menu:**
-```
-1. Process    → chunk & analyze imdb.csv
-2. Search     → filter / keyword search / export
-3. Clear DB   → wipe database and reset
-4. Exit
-```
+### Terminal Menu:
+
+1. Process
+   → Chunk and analyze imdb.csv
+
+2. Search
+   → Filter / Keyword Search / Export
+
+   1. ALL
+      → Returns all processed chunks
+
+   2. Sentiments
+      → Search by available sentiments (from processed data)
+
+   3. Score Range
+      → Search by score range (min to max)
+
+   4. Keyword Search
+      → Search for any keyword occurrence
+
+   5. Export Last Search
+      → Export last search results to CSV file
+
+   6. Exit
+      → Return to main menu
+
+3. Exit
 
 ---
 
