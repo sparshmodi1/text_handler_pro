@@ -211,6 +211,8 @@ input, textarea,
     border-radius:6px !important;
     font-family:'DM Mono',monospace !important;
     font-size:0.8rem !important;
+    caret-color:{T['accent']} !important;
+    cursor:text !important;
 }}
 [data-baseweb="select"] > div {{
     background:{T['input_bg']} !important;
